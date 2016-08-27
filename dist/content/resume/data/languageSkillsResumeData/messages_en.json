@@ -1,0 +1,10 @@
+{
+  "nativeLanguageLabel" : "Naive Language: ",
+  "otherLanguageTable": {
+    "label":"Other Languages: ",
+    "header":{
+      "family":["Language","Understanding","Speaking","Writing"],
+      "specificCapability":["Listening", "Reading", "Spoken interaction", "Skoken production", "Writing"]
+    }
+  }
+}

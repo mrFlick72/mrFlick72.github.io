@@ -1,0 +1,10 @@
+{
+  "nativeLanguageLabel" : "Madre lingua: ",
+  "otherLanguageTable": {
+    "label":"Altre lingue: ",
+    "header":{
+      "family":["Lingua","Comprensione","Parlato","Scritto"],
+      "specificCapability":["Comprensione", "Lettura", "Interazione", "PRoduzione orale", "Scrittura"]
+    }
+  }
+}

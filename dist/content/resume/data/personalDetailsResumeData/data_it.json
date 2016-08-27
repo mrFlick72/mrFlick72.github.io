@@ -1,0 +1,15 @@
+[
+  {"lable":"Cognome","value":"Vaudi"},
+  {"lable":"Nome","value":"Valerio"},
+  {"lable":"Indirizzo","value":"Via Sessa aurunca 8"},
+  {"lable":"CAP","value":"00042"},
+  {"lable":"Citta","value":"Anzio"},
+  {"lable":"PRovincia","value":"Roma"},
+  {"lable":"E-Mail","value":"valerio.vaudi@gmail.com"},
+  {"lable":"Telefono","value":"069873633"},
+  {"lable":"Mobile","value":"3392381976"},
+  {"lable":"Data di nascita","value":"14/12/1985"},
+  {"lable":"Nazionalita","value":"Italy"},
+  {"lable":"Sesso","value":"M"},
+  {"lable":"Codice fiscale","value":"VDAVLR85T14A323Q"}
+]
