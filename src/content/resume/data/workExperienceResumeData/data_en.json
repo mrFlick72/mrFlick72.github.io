@@ -10,7 +10,7 @@
         "projects": [
           {
             "title": "Tripy",
-            "body": "content/resume/data/workExperienceResumeData/sourcesense/axa/tripy",
+            "body": "dist/content/resume/data/workExperienceResumeData/sourcesense/axa/tripy",
             "skills": [
               "IntelliJ IDEA",
               "ER-Diagram",
@@ -21,7 +21,7 @@
           },
           {
             "title": "SIAP-integration",
-            "body": "content/resume/data/workExperienceResumeData/sourcesense/axa/siap",
+            "body": "dist/content/resume/data/workExperienceResumeData/sourcesense/axa/siap",
             "skills": [
               "WSO2, Api Manager",
               "Maven",
@@ -43,7 +43,7 @@
         "projects":[
           {
             "title":"Bug fix and documentation",
-            "body":"content/resume/data/workExperienceResumeData/geoConsulting/telecomItalia/bugFixAndDocumentation",
+            "body":"dist/content/resume/data/workExperienceResumeData/geoConsulting/telecomItalia/bugFixAndDocumentation",
             "skills":[
               "Eclipse",
               "Microsoft Word",
@@ -52,7 +52,7 @@
           },
           {
             "title":"Macchinetta calcolatrice FFP",
-            "body":"content/resume/data/workExperienceResumeData/geoConsulting/telecomItalia/bugFixAndDocumentation",
+            "body":"dist/content/resume/data/workExperienceResumeData/geoConsulting/telecomItalia/bugFixAndDocumentation",
             "skills":[
               "Language programming: JAVA",
               "J2EE: EJB 3.0, JPA",
@@ -62,7 +62,7 @@
           },
           {
             "title":"Sonar-service",
-            "body":"content/resume/data/workExperienceResumeData/geoConsulting/telecomItalia/bugFixAndDocumentation",
+            "body":"dist/content/resume/data/workExperienceResumeData/geoConsulting/telecomItalia/bugFixAndDocumentation",
             "skills":[
               "Language programming: JAVA",
               "Building: Apache Maven 3.x",
@@ -80,7 +80,7 @@
         "projects":[
           {
             "title":"S.E.P.I.S.",
-            "body":"content/resume/data/workExperienceResumeData/geoConsulting/biscottiGentilini/sepis",
+            "body":"dist/content/resume/data/workExperienceResumeData/geoConsulting/biscottiGentilini/sepis",
             "skills":[
               "Linguaggio: JAVA",
               "Building: Apache Maven 3.x",
@@ -99,7 +99,7 @@
         "projects":[
           {
             "title":"GFT",
-            "body":"content/resume/data/workExperienceResumeData/geoConsulting/provinciaDiPerugia/gft",
+            "body":"dist/content/resume/data/workExperienceResumeData/geoConsulting/provinciaDiPerugia/gft",
             "skills":[
               "Language programming: JAVA 1.7",
               "ECM: Alfresco 4.2.c",
@@ -122,13 +122,13 @@
         "projects":[
           {
             "title":"JC4SAP",
-            "body":"content/resume/data/workExperienceResumeData/geoConsulting/provinciaDiPerugia/gft",
+            "body":"dist/content/resume/data/workExperienceResumeData/geoConsulting/provinciaDiPerugia/gft",
             "skills":[
               "Language programming: JAVA 1.7",
               "Building: Apache Maven 3.x",
               "Main Framework: Spring 3.x",
               "WS REST: Apache CXF",
-              "Alfresco: content model",
+              "Alfresco: dist/content model",
               "CMIS: Apache Chemistry",
               "SAP: SAP JCo, Company Framework based upon SAP JCo",
               "IntelliJ Idea"

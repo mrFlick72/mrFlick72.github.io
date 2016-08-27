@@ -9,16 +9,16 @@ angular.module('valeriovaudi', ['ngCookies', 'ui.router', "home", 'resume', "mus
                 abstract: true,
                 views: {
                     'header': {
-                        templateUrl: 'template/header.html'
+                        templateUrl: 'dist/template/header.html'
                     },
                     'menu':{
-                        templateUrl: 'template/menu.html'
+                        templateUrl: 'dist/template/menu.html'
                     },
                     'footer':{
-                        templateUrl: 'template/footer.html'
+                        templateUrl: 'dist/template/footer.html'
                     }
                 }
             });
     }]).controller("baseCtr",["$scope", function($scope){
-        $scope.avatar="asset/images/myPhoto.jpeg";
+        $scope.avatar="dist/asset/images/myPhoto.jpeg";
     }]);

@@ -6,7 +6,7 @@ angular.module('contact',["commonService"])
                 url: '/contact',
                 views: {
                     'container@': {
-                        templateUrl: 'content/contact/template/content.html',
+                        templateUrl: 'dist/content/contact/template/content.html',
                         controller:"contactController"
                     }
                 }
@@ -33,6 +33,6 @@ angular.module('contact',["commonService"])
         }
 
         $scope.init = function(){
-            i18nPageContentResolver.jsonMessagesResolver("content/contact/data/messages").then(function(data){$scope.messages = data.data});
+            i18nPageContentResolver.jsonMessagesResolver("dist/content/contact/data/messages").then(function(data){$scope.messages = data.data});
         };
     }]);

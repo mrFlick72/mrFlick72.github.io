@@ -5,12 +5,12 @@ angular.module('cs',["commonService"])
                 url: '/cs',
                 views: {
                     'container@': {
-                        templateUrl: 'content/cs/template/content.html',
+                        templateUrl: 'dist/content/cs/template/content.html',
                         controller : 'computerScienceController'
                     }
                 }
             })
     }])
     .controller("computerScienceController",["$scope", function($scope) {
-        $scope.mainContent = "content/cs/data/computerScience/content";
+        $scope.mainContent = "dist/content/cs/data/computerScience/content";
     }]);

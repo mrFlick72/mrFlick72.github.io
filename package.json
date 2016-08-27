@@ -7,10 +7,10 @@
     "angular-ui-router": "^0.3.0",
     "bootstrap": "^3.3.7",
     "i18n": "^0.8.3",
-    "jquery": "^2.2.4",
-    "pump": "^1.0.1"
+    "jquery": "^2.2.4"
   },
   "devDependencies": {
+    "pump": "^1.0.1",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-uglify": "^2.0.0",

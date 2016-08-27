@@ -6,7 +6,7 @@ angular.module('music',["commonService"])
             url: '/music',
             views: {
                 'container@': {
-                    templateUrl: 'content/music/template/content.html',
+                    templateUrl: 'dist/content/music/template/content.html',
                     controller:"musicController"
                 }
             }
@@ -14,6 +14,6 @@ angular.module('music',["commonService"])
     }])
     .controller("musicController", ["$scope", function($scope) {
         $scope.init = function(){
-            $scope.sectionContent='content/music/data/content';
+            $scope.sectionContent='dist/content/music/data/content';
         };
     }]);

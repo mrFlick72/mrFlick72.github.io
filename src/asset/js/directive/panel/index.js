@@ -7,7 +7,7 @@ angular.module("siteDirectiveModules")
 .directive("panelReader", ["i18nPageContentResolver", function(i18nPageContentResolver){
         return {
             restrict: 'E',
-            templateUrl:"asset/js/directive/panel/template.html",
+            templateUrl:"dist/asset/js/directive/panel/template.html",
             scope:{
                 "panelHeader":"=panelHeader",
                 "panelContent":"=panelContent"

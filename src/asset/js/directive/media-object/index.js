@@ -7,7 +7,7 @@ angular.module("siteDirectiveModules")
 .directive("mediaObjectReader", ["i18nPageContentResolver", function(i18nPageContentResolver){
         return {
             restrict: 'E',
-            templateUrl:"asset/js/directive/media-object/template.html",
+            templateUrl:"dist/asset/js/directive/media-object/template.html",
             scope:{
                 "mediaHeading":"=mediaHeading",
                 "mediaImage":"=mediaImage",

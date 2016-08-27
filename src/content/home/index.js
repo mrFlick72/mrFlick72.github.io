@@ -6,7 +6,7 @@ angular.module('home',["commonService"])
             url: '/',
             views: {
                 'container@': {
-                    templateUrl: 'content/home/template/content.html',
+                    templateUrl: 'dist/content/home/template/content.html',
                     controller : 'indexController'
                 }
             }
@@ -14,7 +14,7 @@ angular.module('home',["commonService"])
     }])
     .controller("indexController", ["$scope", "$http", function($scope,$http) {
         $scope.init = function(){
-            $http.get('content/home/data/homeData.json').success(function(data){
+            $http.get('dist/content/home/data/homeData.json').success(function(data){
                 $scope.section=data;
             });
         };

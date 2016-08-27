@@ -7,7 +7,7 @@ angular.module("siteDirectiveModules")
 .directive("webContentReader", ["i18nPageContentResolver", function(i18nPageContentResolver){
         return {
             restrict: 'E',
-            templateUrl:"asset/js/directive/web-content/template.html",
+            templateUrl:"dist/asset/js/directive/web-content/template.html",
             scope:{
                 "avatar":"=avatar",
                 "body":"=body"

@@ -5,7 +5,7 @@ angular.module('aboutMe',["commonService"])
                 url: '/aboutMe',
                 views: {
                     'container@': {
-                        templateUrl: 'content/aboutMe/template/content.html',
+                        templateUrl: 'dist/content/aboutMe/template/content.html',
                         controller:"aboutMeController"
                     }
                 }
@@ -13,6 +13,6 @@ angular.module('aboutMe',["commonService"])
     }])
     .controller("aboutMeController", ["$scope", function($scope) {
         $scope.init = function(){
-            $scope.sectionContent='content/aboutMe/data/content';
+            $scope.sectionContent='dist/content/aboutMe/data/content';
         };
     }]);
