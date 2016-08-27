@@ -77,6 +77,16 @@ gulp.task('copy-img', function (cb) {
     );
 
 });
+gulp.task('copy-data', function (cb) {
+    pump([
+            gulp.src(['src/asset/data/**' ]),
+            gulpIgnore('*.js'),
+            gulp.dest('dist/asset/data')
+        ],
+        cb
+    );
+
+});
 
 gulp.task('compress-directicve', function (cb) {
     pump([
@@ -139,6 +149,7 @@ gulp.task('build-all',
             ['compress-js',
             'compress-css',
             'copy-img',
+            "copy-data",
             'compress-directicve',
             'compress-site-content',
             'compress-site-template',

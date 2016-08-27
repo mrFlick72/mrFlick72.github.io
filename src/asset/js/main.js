@@ -19,6 +19,11 @@ angular.module('valeriovaudi', ['ngCookies', 'ui.router', "home", 'resume', "mus
                     }
                 }
             });
-    }]).controller("baseCtr",["$scope", function($scope){
+    }]).controller("baseCtr",["$scope", "i18nPageContentResolver", function($scope, i18nPageContentResolver){
         $scope.avatar="dist/asset/images/myPhoto.jpeg";
+        i18nPageContentResolver.jsonMessagesResolver("dist/asset/data/menuLabel").success(function(data){
+            $scope.menuLabel = data;
+        });
+
+        console.log($scope.menuLabel)
     }]);
