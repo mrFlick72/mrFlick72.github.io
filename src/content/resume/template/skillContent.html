@@ -1,0 +1,14 @@
+<div role="tabpanel" class="tab-pane" id="skills">
+    <div class="row" ng-repeat="skillData in skillsData">
+        <span class="{{paginationInfo.leftColumnOffset}} {{paginationInfo.leftColumnSize}}"></span>
+            <span class="{{paginationInfo.rightColumnSize}}">
+                <b>{{skillData.familyName}}</b>
+                <br/>
+
+                <span ng-repeat="skill in skillData.value">
+                    {{skill}} <br ng-if="!$last"/>
+                </span>
+                <br/>
+            </span>
+    </div>
+</div>

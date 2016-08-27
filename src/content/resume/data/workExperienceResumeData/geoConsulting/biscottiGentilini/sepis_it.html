@@ -1,0 +1,6 @@
+The goal of project is been the creation of a broker between the e-commerce Magento and SAP.
+In particular has been created a scheduled job in which the SEPIS reads the pending orders in Magento and performs the VA01 in SAP,
+ create the customer if don't exist, changes the status of order in Magento in automatic way.
+ For this project has been choice of using Spring WS for interact with SOAP Web Services of Magento,
+ an ad-hoc company framework upon SAP JCo and Spring for help call of bapi.
+ For scheduling has been used Quartz with the Spring facilities.

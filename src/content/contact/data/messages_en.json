@@ -1,0 +1,26 @@
+{
+  "headerText":"If do you want contact me please send a mail at",
+  "mail":{
+    "label":"E-mail",
+    "placeholder":"Insert your mail"
+  },
+  "subject":{
+    "label":"Subject",
+    "placeholder":"Insert your mail subject"
+  },
+  "body":{
+    "label":"Body",
+    "placeholder":"Put hear your mail body"
+  },
+  "sendButton":"Send Mail",
+  "modal":{
+    "title":"Outcome mail sending",
+    "body":{
+      "success":"Your Mail was sent correctly",
+      "failure":"Your Mail wasn't sent correctly"
+    },
+    "button":{
+      "ok":"Ok"
+    }
+  }
+}
