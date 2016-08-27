@@ -1,7 +1,7 @@
 [
   [
     {"lable":"Nome della società","value":"VMware, License PearsonVUE"},
-    {"lable":"Title","value":"SpringSource Certified Enterprise Integration Specialist"},
+    {"lable":"Titolo","value":"SpringSource Certified Enterprise Integration Specialist"},
     {"lable":"Tipo","value":"Certificazione"},
     {"lable":"Data","value":"24/07/2014"}
   ],
@@ -19,8 +19,8 @@
   ],
   [
     {"lable":"Nome della scuola","value":"Liceo scientifico 'Innocenzo XII' Anzio"},
-    {"lable":"Title of degree","value":"Scuola media superiore"},
-    {"lable":"Type of degree","value":"Scientific high school degree"},
+    {"lable":"Titolo","value":"Scuola media superiore"},
+    {"lable":"Tipo","value":"Scientific high school degree"},
     {"lable":"Data","value":"2003/2004"}
   ],
   [
