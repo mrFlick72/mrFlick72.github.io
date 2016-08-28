@@ -59,7 +59,10 @@ angular.module('resume',["commonService"])
             }]
         })
     }])
-    .controller("resumeController", ["$scope", "$state", function($scope,$state) {
+    .controller("resumeController", ["$scope", "$state","i18nPageContentResolver", function($scope,$state,i18nPageContentResolver) {
         $scope.paginationInfo = {leftColumnOffset:"",leftColumnSize:"col-lg-3 col-md-3 col-sm-12 col-xs-12",rightColumnSize:"col-lg-9 col-md-9 col-sm-12 col-xs-12"};
         $state.go("root.resume.personalDetails");
+        i18nPageContentResolver.jsonMessagesResolver("dist/content/resume/data/resumeTabLabel").success(function(data){
+            $scope.resumeTabLabel = data;
+        })
     }]);
