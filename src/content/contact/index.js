@@ -1,5 +1,5 @@
 angular.module('contact',["commonService"])
-    .value("mailServiceUrl","http://localhost:3000/mail")
+    .value("mailServiceUrl","http://valeriovaudiio-backend.cfapps.io/mail")
     .config(["$stateProvider",function($stateProvider) {
         $stateProvider
             .state('root.contact', {
