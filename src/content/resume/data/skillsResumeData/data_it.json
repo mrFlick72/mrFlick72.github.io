@@ -14,5 +14,6 @@
   {"familyName":"Alfresco","value":["Content Model","Share Customizing (content model configuration)","Web Script",""]},
   {"familyName":"Liferay","value":["Portal Administration", "Portlet","Service-Builder","Hoock","Lucene Query",""]},
   {"familyName":"Sonar","value":[]},
-  {"familyName":"Docker","value":[]}
+  {"familyName":"Docker","value":[]},
+  {"familyName":"WSO2","value":["Api-Manager",""]}
 ]
