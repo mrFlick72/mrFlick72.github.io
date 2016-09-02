@@ -1,6 +1,6 @@
 "use strict"
 
-angular.module('valeriovaudi', ['ngCookies', 'ui.router', "home", 'resume', "music","cs", "aboutMe","contact", "siteDirectiveModules"])
+angular.module('valeriovaudi', ['ngSanitize', 'ui.router', "home", 'resume', "music","cs", "aboutMe","contact", "siteDirectiveModules"])
     .config(["$stateProvider", "$urlRouterProvider", function($stateProvider,$urlRouterProvider){
         $urlRouterProvider.otherwise("/");
         $stateProvider

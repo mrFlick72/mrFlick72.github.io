@@ -4,6 +4,7 @@
   "dependencies": {
     "angular": "^1.5.5",
     "angular-cookies": "^1.5.8",
+    "angular-sanitize": "^1.5.8",
     "angular-ui-router": "^0.3.0",
     "bootstrap": "^3.3.7",
     "i18n": "^0.8.3",

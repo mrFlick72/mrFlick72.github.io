@@ -28,7 +28,7 @@ gulp.task('compress-js', function (cb) {
                     'node_modules/jquery/dist/jquery.js',
                     'node_modules/bootstrap/dist/js/bootstrap.js',
                     'node_modules/angular/angular.js',
-                    'node_modules/angular-cookies/angular-cookies.js',
+                    'node_modules/angular-sanitize/angular-sanitize.js',
                     'node_modules/angular-ui-router/release/angular-ui-router.js',
                     'src/asset/js/directive/index.js',
                     'src/asset/js/directive/media-object/index.js',

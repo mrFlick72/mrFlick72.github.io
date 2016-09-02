@@ -3,7 +3,7 @@
 angular.module('commonService', [])
     .value("acceptLanguages",["en", "it"])
     .value("defaultLanguage","en")
-    .factory("i18nPageContentResolver",["$http", "acceptLanguages", "defaultLanguage", function($http,acceptLanguages,defaultLanguage){
+    .factory("i18nPageContentResolver",["$http", "acceptLanguages", "defaultLanguage", "$templateCache", function($http,acceptLanguages,defaultLanguage, $templateCache){
 
         function getServerAcceptLanguageSuffix(serverAcceptLanguage){
             return serverAcceptLanguage.map(function(item){
@@ -39,7 +39,7 @@ angular.module('commonService', [])
                 return getIn18Resources(baseMessages, ".json");
             },
             jsonMessagesResolver : function(baseMessages){
-                return $http.get(this.jsonMessagesPathResolver(baseMessages));
+                return $http.get(this.jsonMessagesPathResolver(baseMessages), {cache:$templateCache});
             }
         };
     }]);
