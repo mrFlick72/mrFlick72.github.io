@@ -2,7 +2,7 @@
 
 angular.module('home',["commonService"])
     .config(["$stateProvider" ,function($stateProvider) {
-        $stateProvider.state('root.home', {
+        $stateProvider.state('home', {
             url: '/',
             views: {
                 'container@': {

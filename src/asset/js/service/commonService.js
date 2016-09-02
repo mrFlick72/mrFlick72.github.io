@@ -33,7 +33,8 @@ angular.module('commonService', [])
 
         return {
             pageContentResolver : function(baseUrl){
-                return $http.get(getIn18Resources(baseUrl, ".html"), {cache:true});
+                console.log($templateCache)
+                return $http.get(getIn18Resources(baseUrl, ".html"), {cache:$templateCache});
             },
             pageUrlResolver : function(baseUrl){
                 return getIn18Resources(baseUrl, ".html");
@@ -42,7 +43,8 @@ angular.module('commonService', [])
                 return getIn18Resources(baseMessages, ".json");
             },
             jsonMessagesResolver : function(baseMessages){
-                return $http.get(this.jsonMessagesPathResolver(baseMessages), {cache:true});
+                console.log($templateCache)
+                return $http.get(this.jsonMessagesPathResolver(baseMessages), {cache:$templateCache});
             }
         };
     }]);

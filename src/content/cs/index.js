@@ -1,7 +1,7 @@
 angular.module('cs',["commonService"])
     .config(["$stateProvider",function($stateProvider) {
         $stateProvider
-            .state('root.cs', {
+            .state('cs', {
                 url: '/cs',
                 views: {
                     'container@': {

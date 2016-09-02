@@ -1,7 +1,7 @@
 angular.module('aboutMe',["commonService"])
     .config(["$stateProvider", function($stateProvider) {
         $stateProvider
-            .state('root.aboutMe', {
+            .state('aboutMe', {
                 url: '/aboutMe',
                 views: {
                     'container@': {

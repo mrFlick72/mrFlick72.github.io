@@ -2,7 +2,7 @@
 
 angular.module('music',["commonService"])
     .config(["$stateProvider", function($stateProvider) {
-        $stateProvider.state('root.music', {
+        $stateProvider.state('music', {
             url: '/music',
             views: {
                 'container@': {

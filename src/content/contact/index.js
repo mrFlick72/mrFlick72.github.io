@@ -2,7 +2,7 @@ angular.module('contact',["commonService"])
     .value("mailServiceUrl","https://valeriovaudiio-backend.cfapps.io/mail")
     .config(["$stateProvider",function($stateProvider) {
         $stateProvider
-            .state('root.contact', {
+            .state('contact', {
                 url: '/contact',
                 views: {
                     'container@': {

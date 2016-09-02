@@ -2,7 +2,7 @@
 
 angular.module('resume',["commonService"])
     .config(["$stateProvider", function($stateProvider){
-        $stateProvider.state('root.resume', {
+        $stateProvider.state('resume', {
             url: '/resume',
             views: {
                 'container@': {
@@ -10,7 +10,7 @@ angular.module('resume',["commonService"])
                     controller : 'resumeController'
                 }
             }
-        }).state('root.resume.personalDetails', {
+        }).state('resume.personalDetails', {
             templateUrl: 'dist/content/resume/template/personalDetailsContent.html',
             controller : ["$http", "$scope", "i18nPageContentResolver", function($http, $scope, i18nPageContentResolver){
                 i18nPageContentResolver.jsonMessagesResolver('dist/content/resume/data/personalDetailsResumeData/data')
@@ -18,7 +18,7 @@ angular.module('resume',["commonService"])
                         $scope.personalDetailsData=data;
                     });
             }]
-        }).state('root.resume.education', {
+        }).state('resume.education', {
             templateUrl: 'dist/content/resume/template/educationContent.html',
             controller : ["$http", "$scope", "i18nPageContentResolver", function($http, $scope, i18nPageContentResolver){
                 i18nPageContentResolver.jsonMessagesResolver('dist/content/resume/data/educationsResumeData/data')
@@ -26,7 +26,7 @@ angular.module('resume',["commonService"])
                         $scope.educationsData=data;
                     });
             }]
-        }).state('root.resume.skills', {
+        }).state('resume.skills', {
             templateUrl: 'dist/content/resume/template/skillContent.html',
             controller : ["$http", "$scope", "i18nPageContentResolver", function($http, $scope, i18nPageContentResolver){
                 i18nPageContentResolver.jsonMessagesResolver('dist/content/resume/data/skillsResumeData/data')
@@ -34,7 +34,7 @@ angular.module('resume',["commonService"])
                         $scope.skillsData=data;
                     });
             }]
-        }).state('root.resume.workExperience', {
+        }).state('resume.workExperience', {
             templateUrl: 'dist/content/resume/template/workExperienceContent.html',
             controller : ["$http", "$scope", "i18nPageContentResolver", function($http, $scope, i18nPageContentResolver){
                 $scope.i18nPageContentResolver = i18nPageContentResolver;
@@ -44,7 +44,7 @@ angular.module('resume',["commonService"])
                         $scope.workExperiencesData=data;
                     });
             }]
-        }).state('root.resume.languageSkills', {
+        }).state('resume.languageSkills', {
             templateUrl: 'dist/content/resume/template/languageSkillsContent.html',
             controller : ["$http", "$scope", "i18nPageContentResolver", function($http, $scope, i18nPageContentResolver){
                 i18nPageContentResolver.jsonMessagesResolver('dist/content/resume/data/languageSkillsResumeData/messages')
@@ -61,7 +61,7 @@ angular.module('resume',["commonService"])
     }])
     .controller("resumeController", ["$scope", "$state","i18nPageContentResolver", function($scope,$state,i18nPageContentResolver) {
         $scope.paginationInfo = {leftColumnOffset:"",leftColumnSize:"col-lg-3 col-md-3 col-sm-12 col-xs-12",rightColumnSize:"col-lg-9 col-md-9 col-sm-12 col-xs-12"};
-        $state.go("root.resume.personalDetails");
+        $state.go("resume.personalDetails");
         i18nPageContentResolver.jsonMessagesResolver("dist/content/resume/data/resumeTabLabel").success(function(data){
             $scope.resumeTabLabel = data;
         })

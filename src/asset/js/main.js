@@ -1,24 +1,8 @@
 "use strict"
 
 angular.module('valeriovaudi', ['ngSanitize', 'ui.router', "home", 'resume', "music","cs", "aboutMe","contact", "siteDirectiveModules"])
-    .config(["$stateProvider", "$urlRouterProvider", function($stateProvider,$urlRouterProvider){
+    .config(["$urlRouterProvider", function($urlRouterProvider){
         $urlRouterProvider.otherwise("/");
-        $stateProvider
-            .state('root',{
-                url: '',
-                abstract: true
-               /* views: {
-                    'header': {
-                        templateUrl: 'dist/template/header.html'
-                    },
-                    'menu':{
-                        templateUrl: 'dist/template/menu.html'
-                    },
-                    'footer':{
-                        templateUrl: 'dist/template/footer.html'
-                    }
-                }*/
-            });
     }]).controller("baseCtr",["$scope", "i18nPageContentResolver", function($scope, i18nPageContentResolver){
         $scope.avatar="dist/asset/images/myPhoto.jpeg";
         i18nPageContentResolver.jsonMessagesResolver("dist/asset/data/menuLabel").success(function(data){
