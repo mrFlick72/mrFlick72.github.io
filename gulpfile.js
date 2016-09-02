@@ -101,15 +101,6 @@ gulp.task('compress-directicve', function (cb) {
 
 });
 
-gulp.task('compress-site-template', function (cb) {
-    pump([
-            gulp.src(['src/template/**']),
-            minify(minifyOpt),
-            gulp.dest('dist/template')
-        ],
-        cb
-    );
-});
 
 gulp.task('compress-site-content', function (cb) {
     pump([
@@ -152,7 +143,6 @@ gulp.task('build-all',
             "copy-data",
             'compress-directicve',
             'compress-site-content',
-            'compress-site-template',
             'compress-site-doc',
             'compress-site-index.html']);
 
