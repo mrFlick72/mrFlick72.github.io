@@ -6,8 +6,8 @@ angular.module('valeriovaudi', ['ngSanitize', 'ui.router', "home", 'resume', "mu
         $stateProvider
             .state('root',{
                 url: '',
-                abstract: true,
-                views: {
+                abstract: true
+               /* views: {
                     'header': {
                         templateUrl: 'dist/template/header.html'
                     },
@@ -17,7 +17,7 @@ angular.module('valeriovaudi', ['ngSanitize', 'ui.router', "home", 'resume', "mu
                     'footer':{
                         templateUrl: 'dist/template/footer.html'
                     }
-                }
+                }*/
             });
     }]).controller("baseCtr",["$scope", "i18nPageContentResolver", function($scope, i18nPageContentResolver){
         $scope.avatar="dist/asset/images/myPhoto.jpeg";

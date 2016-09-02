@@ -12,8 +12,11 @@ angular.module("siteDirectiveModules")
                 "avatar":"=avatar",
                 "body":"=body"
             },
-            link:function(scope){
-                scope.body = i18nPageContentResolver.pageUrlResolver(scope.body);
+            link: function(scope) {
+                i18nPageContentResolver.pageContentResolver(scope.body)
+                    .then(function(response){
+                        scope.bodyContentData = response.data;
+                    });
             }
         }
     }]);

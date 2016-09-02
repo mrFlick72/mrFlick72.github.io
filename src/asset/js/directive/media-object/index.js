@@ -4,7 +4,7 @@
 "use strict"
 
 angular.module("siteDirectiveModules")
-.directive("mediaObjectReader", ["i18nPageContentResolver", "$http", "$templateCache", function(i18nPageContentResolver, $http, $templateCache){
+.directive("mediaObjectReader", ["i18nPageContentResolver", function(i18nPageContentResolver){
         return {
             restrict: 'E',
             templateUrl:"dist/asset/js/directive/media-object/template.html",
@@ -14,12 +14,11 @@ angular.module("siteDirectiveModules")
                 "hasMediaHeading":"=hasMediaHeading",
                 "mediaContent":"=mediaContent"
             },
-            link:function(scope){
-                //scope.mediaContent = i18nPageContentResolver.pageUrlResolver(scope.mediaContent);
-                $http.get(i18nPageContentResolver.pageUrlResolver(scope.mediaContent), {cache:$templateCache})
+            link: function(scope) {
+                i18nPageContentResolver.pageContentResolver(scope.mediaContent)
                     .then(function(response){
                         scope.mediaContentData = response.data;
-                    })
+                    });
             }
         }
     }]);

@@ -32,6 +32,9 @@ angular.module('commonService', [])
         }
 
         return {
+            pageContentResolver : function(baseUrl){
+                return $http.get(getIn18Resources(baseUrl, ".html"), {cache:$templateCache});
+            },
             pageUrlResolver : function(baseUrl){
                 return getIn18Resources(baseUrl, ".html");
             },

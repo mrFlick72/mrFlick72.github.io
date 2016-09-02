@@ -2,6 +2,5 @@
     <div ng-if="avatar" >
         <img src="{{avatar}}" class="left-decorator"/>
     </div>
-
-    <div ng-include="body"></div>
+    <div ng-bind-html="bodyContentData"></div>
 </div>
