@@ -33,7 +33,6 @@ angular.module('commonService', [])
 
         return {
             pageContentResolver : function(baseUrl){
-                console.log($templateCache)
                 return $http.get(getIn18Resources(baseUrl, ".html"), {cache:$templateCache});
             },
             pageUrlResolver : function(baseUrl){
@@ -43,7 +42,6 @@ angular.module('commonService', [])
                 return getIn18Resources(baseMessages, ".json");
             },
             jsonMessagesResolver : function(baseMessages){
-                console.log($templateCache)
                 return $http.get(this.jsonMessagesPathResolver(baseMessages), {cache:$templateCache});
             }
         };

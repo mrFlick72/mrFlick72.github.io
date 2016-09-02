@@ -15,10 +15,7 @@ angular.module("siteDirectiveModules")
                 "mediaContent":"=mediaContent"
             },
             link: function(scope) {
-                i18nPageContentResolver.pageContentResolver(scope.mediaContent)
-                    .then(function(response){
-                        scope.mediaContentData = response.data;
-                    });
+                scope.mediaContent = i18nPageContentResolver.pageUrlResolver(scope.mediaContent);
             }
         }
     }]);

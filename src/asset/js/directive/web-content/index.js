@@ -13,10 +13,7 @@ angular.module("siteDirectiveModules")
                 "body":"=body"
             },
             link: function(scope) {
-                i18nPageContentResolver.pageContentResolver(scope.body)
-                    .then(function(response){
-                        scope.bodyContentData = response.data;
-                    });
+                scope.body = i18nPageContentResolver.pageUrlResolver(scope.body);
             }
         }
     }]);

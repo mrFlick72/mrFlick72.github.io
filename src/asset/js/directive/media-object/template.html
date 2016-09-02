@@ -6,6 +6,6 @@
     </div>
     <div class="media-body">
         <h4 ng-if="hasMediaHeading" class="media-heading"><b>{{mediaHeading}}</b></h4>
-        <div ng-bind-html="mediaContentData"></div>
+        <div ng-include="mediaContent"></div>
     </div>
 </div>
