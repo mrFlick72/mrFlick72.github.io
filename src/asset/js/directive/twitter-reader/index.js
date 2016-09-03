@@ -1,8 +1,8 @@
 angular.module("siteDirectiveModules")
-    .value("tweetReaderBaseServiceUrl","http://localhost:3000/twitter")
-    .value("tweetReaderServiceUserTimeLineUrl","http://localhost:3000/twitter/userTimeLine")
-    .value("tweetReaderServiceTweetUrl","http://localhost:3000/twitter/tweet")
-    .value("tweetReaderServiceUserDetailsUrl","http://localhost:3000/twitter/user/details")
+    .value("tweetReaderBaseServiceUrl","https://valeriovaudiio-backend.cfapps.io/twitter")
+    .value("tweetReaderServiceUserTimeLineUrl","https://valeriovaudiio-backend.cfapps.io/twitter/userTimeLine")
+    .value("tweetReaderServiceTweetUrl","https://valeriovaudiio-backend.cfapps.io/twitter/tweet")
+    .value("tweetReaderServiceUserDetailsUrl","https://valeriovaudiio-backend.cfapps.io/twitter/user/details")
     .directive("tweetReader", ["$http", "$sce", "tweetReaderServiceUserTimeLineUrl", "tweetReaderServiceTweetUrl", "tweetReaderServiceUserDetailsUrl",
         function($http, $sce, tweetReaderServiceUserTimeLineUrl, tweetReaderServiceTweetUrl, tweetReaderServiceUserDetailsUrl){
         return {
