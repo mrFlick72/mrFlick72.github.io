@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title"><img src="{{trustSrc(userDetails.profileImageUrl)}}" /> {{userDetails.name}}</h3>
+    </div>
+    <div class="panel-body">
+        <div class="wall separation-content-corner">
+            <div class="row">
+                <div ng-repeat="tweet in tweets">
+                    <div class="embeddedContainer col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <div ng-bind-html="tweet" class="block-center"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

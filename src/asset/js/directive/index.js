@@ -4,4 +4,4 @@
 
 "use strict"
 
-angular.module("siteDirectiveModules", ["commonService"]);
+angular.module("siteDirectiveModules", ["commonService","ngSanitize"]);
