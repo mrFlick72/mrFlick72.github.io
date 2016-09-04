@@ -14,5 +14,9 @@ angular.module('aboutMe',["commonService"])
     .controller("aboutMeController", ["$scope", function($scope) {
         $scope.init = function(){
             $scope.sectionContent='dist/content/aboutMe/data/content';
+
+            $scope.bioContent='dist/content/aboutMe/data/bio/content';
+            $scope.workContent='dist/content/aboutMe/data/work/content';
+            $scope.musicContent='dist/content/aboutMe/data/music/content';
         };
     }]);
