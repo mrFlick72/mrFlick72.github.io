@@ -58,6 +58,7 @@ gulp.task('compress-css', function (cb) {
                      'node_modules/bootstrap/dist/css/bootstrap-theme.css',
                     'src/content/resume/main.css',
                     'src/asset/css/main.css',
+                    'src/asset/css/twitter.css',
                     'src/asset/js/directive/directive.css' ]),
             concat("css/main.min.css"),
             uglifyCss(),
