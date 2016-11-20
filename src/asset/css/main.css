@@ -97,3 +97,10 @@ div.menuContainer {
 .embeddedContainer {
     margin-bottom: 10px;
 }
+
+.bottom-space-row {
+    margin-bottom: 10px;
+}
+.top-space-row {
+    margin-top: 10px;
+}
