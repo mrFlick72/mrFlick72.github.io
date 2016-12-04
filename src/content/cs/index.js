@@ -12,13 +12,23 @@ angular.module('cs',["commonService"])
                 }
             })
     }])
-    .controller("computerScienceController",["$scope","$http","gitHubServiceUrl", function($scope,$http,gitHubServiceUrl) {
+    .factory("computerScienceService",function () {
+        // todo
+    })
+    .controller("computerScienceController",["$rootScope", "$scope","$http","gitHubServiceUrl", function($rootScope,$scope,$http,gitHubServiceUrl) {
         $scope.initComputerScienceSection = function() {
             $http.get(gitHubServiceUrl+"/repo",{cache: true}).then(function (data) {
                 $scope.projects = data.data.body;
             });
         };
+
         $scope.initComputerScienceSection();
+        console.log("just before initCsSection event fired")
+
+        $scope.$on("initCsSection",function (event, arg) {
+            console.log("initCsSection event fired")
+            $scope.initComputerScienceSection();
+        });
 
         $scope.projectAvatarUrl = "dist/asset/images/java.jpg";
         $scope.mainContent = "dist/content/cs/data/computerScience/content";
