@@ -12,9 +12,6 @@ angular.module('cs',["commonService"])
                 }
             })
     }])
-    .factory("computerScienceService",function () {
-        // todo
-    })
     .controller("computerScienceController",["$rootScope", "$scope","$http","gitHubServiceUrl", function($rootScope,$scope,$http,gitHubServiceUrl) {
         $scope.initComputerScienceSection = function() {
             $http.get(gitHubServiceUrl+"/repo",{cache: true}).then(function (data) {
