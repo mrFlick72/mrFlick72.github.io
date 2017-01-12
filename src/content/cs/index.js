@@ -20,13 +20,6 @@ angular.module('cs',["commonService"])
         };
 
         $scope.initComputerScienceSection();
-        console.log("just before initCsSection event fired")
-
-        $scope.$on("initCsSection",function (event, arg) {
-            console.log("initCsSection event fired")
-            $scope.initComputerScienceSection();
-        });
 
         $scope.projectAvatarUrl = "dist/asset/images/java.jpg";
-        $scope.mainContent = "dist/content/cs/data/computerScience/content";
     }]);
