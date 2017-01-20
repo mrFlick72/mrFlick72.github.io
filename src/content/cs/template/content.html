@@ -29,22 +29,28 @@
             </div>
         </div>
         <div class="row top-space-row">
-            <div class="col-xs-offset-4 col-sm-offset-4 col-md-offset-4 col-lg-offset-4">
+            <div class="col-md-offset-4 col-lg-offset-4">
                 <nav aria-label="Page navigation">
                     <ul class="pagination pagination-lg">
-                        <li>
-                            <a href="#" aria-label="Previous">
+                        <li ng-if="!isFirstPage">
+                            <a ng-click="getPage('first')" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;&laquo;</span>
+                            </a>
+                        </li>
+                        <li ng-if="!hasPreviousPage">
+                            <a ng-click="getPage('previous')" aria-label="Previous">
                                 <span aria-hidden="true">&laquo;</span>
                             </a>
                         </li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li>
-                            <a href="#" aria-label="Next">
+
+                        <li ng-if="!hasNextPage">
+                            <a ng-click="getPage('next')" aria-label="Next">
                                 <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                        <li ng-if="!isLastPage">
+                            <a ng-click="getPage('last')" aria-label="Next">
+                                <span aria-hidden="true">&raquo;&raquo;</span>
                             </a>
                         </li>
                     </ul>

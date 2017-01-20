@@ -13,13 +13,33 @@ angular.module('cs',["commonService"])
             })
     }])
     .controller("computerScienceController",["$rootScope", "$scope","$http","gitHubServiceUrl", function($rootScope,$scope,$http,gitHubServiceUrl) {
-        $scope.initComputerScienceSection = function() {
-            $http.get(gitHubServiceUrl+"/repo",{cache: true}).then(function (data) {
+        $scope.initComputerScienceSection = function(url) {
+            var urlAux = url != undefined ? url : gitHubServiceUrl+"/repo";
+            $http.get(urlAux,{cache: true}).then(function (data) {
                 $scope.projects = data.data.body;
+                $scope.links = data.data['_links'];
+
+                checkPageNavigationStatus();
             });
         };
 
-        $scope.initComputerScienceSection();
 
+
+        $scope.getPage = function (direction) {
+            $scope.initComputerScienceSection($scope.links[direction].href);
+
+            checkPageNavigationStatus();
+        };
+
+        var checkPageNavigationStatus = function(){
+            $scope.isFirstPage = !$scope.links['first'];
+
+            $scope.hasPreviousPage = !$scope.links['previous'];
+            $scope.hasNextPage = !$scope.links['next'];
+
+            $scope.isLastPage = !$scope.links['last'];
+        };
+
+        $scope.initComputerScienceSection();
         $scope.projectAvatarUrl = "dist/asset/images/java.jpg";
     }]);
