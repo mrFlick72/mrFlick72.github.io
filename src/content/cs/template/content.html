@@ -4,7 +4,7 @@
     </div>
     <div ng-if="projects">
         <div class="row top-space-row">
-            <div ng-repeat="project in projects">
+            <div ng-repeat="(key,project) in projects">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="panel panel-info">
                         <div class="panel-heading">
@@ -40,6 +40,12 @@
                         <li ng-if="!hasPreviousPage">
                             <a ng-click="getPage('previous')" aria-label="Previous">
                                 <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+
+                        <li ng-repeat = "page in totalPages">
+                            <a ng-click="getPage(page)" aria-label="page">
+                                <span aria-hidden="true">{{$index + 1}}</span>
                             </a>
                         </li>
 
