@@ -14,14 +14,16 @@
                             </h3>
                         </div>
                         <div class="panel-body">
-                            <img src="{{projectAvatarUrl}}" class="img-rounded img-responsive left-decorator"/>
+                            <a ng-href="{{project.cloneUrl}}" target="_blank">
+                                <img src="{{projectAvatarUrl}}" class="img-rounded img-responsive left-decorator"/>
+                            </a>
+
                             <p class="text-justify">{{project.description}}</p>
                         </div>
                         <div class="panel-footer">
                             <ul class="list-group">
-                                <li class="list-group-item">Links: </li>
-                                <li class="list-group-item">download this project: <a ng-href="project.downloadRepoUrl">hear</a></li>
-                                <li class="list-group-item">clone this project: {{project.cloneUrl}}</li>
+                                <li class="list-group-item">download this project: <a ng-href="{{project.downloadRepoUrl}}">hear</a></li>
+                                <li class="list-group-item"><a ng-href="{{project.cloneUrl}}" target="_blank">To repo</a></li>
                             </ul>
                         </div>
                     </div>

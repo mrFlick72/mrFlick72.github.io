@@ -1,5 +1,5 @@
 angular.module('cs',["commonService"])
-    .value("gitHubServiceUrl","http://localhost:3000/github")
+    .value("gitHubServiceUrl","https://valeriovaudiio-backend.cfapps.io/github")
     .config(["$stateProvider",function($stateProvider) {
         $stateProvider
             .state('cs', {
