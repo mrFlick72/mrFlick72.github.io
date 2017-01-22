@@ -16,33 +16,25 @@ angular.module('cs',["commonService"])
         $scope.initComputerScienceSection = function(url) {
             var urlAux = url != undefined ? url : gitHubServiceUrl+"/repo";
             $http.get(urlAux,{cache: true}).then(function (data) {
+                $scope.currentPage = data.data.page;
                 $scope.totalPages = (function(){
                     var totalPages = [];
-                    for (var i = 0 ; i < data.data.total; ++i){
-                        totalPages.push("page-" + i);
+                    for (var i = 0 ; i < data.data.total;){
+                        totalPages.push("page-" + ++i);
                     }
                     return totalPages;
                 })();
 
                 $scope.projects = data.data["_embedded"];
                 $scope.links = data.data['_links'];
-
-                checkPageNavigationStatus();
             });
         };
 
         $scope.getPage = function (direction) {
-            $scope.initComputerScienceSection($scope.links[direction].href);
-            checkPageNavigationStatus();
-        };
-
-        var checkPageNavigationStatus = function(){
-            $scope.isFirstPage = !$scope.links['first'];
-
-            $scope.hasPreviousPage = !$scope.links['previous'];
-            $scope.hasNextPage = !$scope.links['next'];
-
-            $scope.isLastPage = !$scope.links['last'];
+            var directionLink = $scope.links[direction];
+            if(directionLink){
+                $scope.initComputerScienceSection(directionLink.href);
+            }
         };
 
         $scope.initComputerScienceSection();
