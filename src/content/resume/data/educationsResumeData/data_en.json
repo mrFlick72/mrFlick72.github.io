@@ -1,5 +1,17 @@
 [
   [
+    {"lable":"Company name","value":"Pivotal"},
+    {"lable":"Title of degree","value":"SpringSource Certified Spring Web Application Developer"},
+    {"lable":"Type of degree","value":"Certification"},
+    {"lable":"Date","value":"30/12/2016"}
+  ],
+  [
+    {"lable":"Company name","value":"Liferay, Prometric"},
+    {"lable":"Title of degree","value":"Certified Professional Developer Liferay Portal 6.2"},
+    {"lable":"Type of degree","value":"Certification"},
+    {"lable":"Date","value":"22/12/2016"}
+  ],
+  [
     {"lable":"Company name","value":"VMware, License PearsonVUE"},
     {"lable":"Title of degree","value":"SpringSource Certified Enterprise Integration Specialist"},
     {"lable":"Type of degree","value":"Certification"},
