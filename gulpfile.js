@@ -29,7 +29,7 @@ gulp.task('compress-js', function (cb) {
                     'node_modules/bootstrap/dist/js/bootstrap.js',
                     'node_modules/angular/angular.js',
                     'node_modules/angular-sanitize/angular-sanitize.js',
-                    'node_modules/angular-ui-router/release/angular-ui-router.js',
+                    'node_modules/@uirouter/angularjs/release/angular-ui-router.js',
                     'src/asset/js/directive/index.js',
                     'src/asset/js/directive/media-object/index.js',
                     'src/asset/js/directive/twitter-reader/index.js',

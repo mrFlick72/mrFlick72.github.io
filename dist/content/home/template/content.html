@@ -1,1 +1,19 @@
-<div class="row" ng-init="init()"> <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"> <div class="wall"> <section> <tweet-reader> </section> </div> </div> <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"> <div class="wall"> <section ng-repeat="content in section"> <media-object-reader media-image="avatar" has-media-heading="content.panelHeader != ''" media-heading="content.panelHeader" media-content="content.urlContent"> </section> </div> </div> </div>
+<div class="row" ng-init="init()">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <div class="wall">
+            <section>
+                <tweet-reader/>
+            </section>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <div class="wall">
+            <section ng-repeat="content in section">
+                <media-object-reader media-image="avatar"
+                                     has-media-heading="content.panelHeader != ''"
+                                     media-heading="content.panelHeader"
+                                     media-content="content.urlContent" />
+            </section>
+        </div>
+    </div>
+</div>

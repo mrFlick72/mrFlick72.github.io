@@ -50,18 +50,8 @@ div.header {
 }
 
 div.footer {
-    overflow: auto;
-
     border: 1px solid black;
-
-/*    background-image: -webkit-linear-gradient(bottom, rgb(255, 255, 255) 0%, rgb(64, 214, 255) 100%);
-    background-image: -moz-linear-gradient(bottom, rgb(255, 255, 255) 0%, rgb(64, 214, 255) 100%);
-    background-image: -o-linear-gradient(bottom, rgb(255, 255, 255) 0%, rgb(64, 214, 255) 100%);
-    background-image: -ms-linear-gradient(bottom, rgb(255, 255, 255) 0%, rgb(64, 214, 255) 100%);
-    background-image: linear-gradient(bottom, rgb(255, 255, 255) 0%, rgb(64, 214, 255) 100%);*/
     background: rgb(196, 228, 220);
-
-
 
     border-bottom-right-radius: 10px;
     border-bottom-left-radius:  10px;

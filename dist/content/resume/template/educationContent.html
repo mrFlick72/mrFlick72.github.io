@@ -1,1 +1,16 @@
-<div role="tabpanel" class="tab-pane" id="education"> <div ng-repeat="educationData in educationsData"> <div class="row resume-item-row" ng-repeat="educationDataItem in educationData"> <span class="{{paginationInfo.leftColumnOffset}} {{paginationInfo.leftColumnSize}}"> <b>{{educationDataItem.lable}}: </b> </span> <span class="{{paginationInfo.rightColumnSize}}"> {{educationDataItem.value}} </span> </div> <div class="row"> <span class="{{paginationInfo.leftColumnOffset}} {{paginationInfo.leftColumnSize}}"> <br> </span> <span class="{{paginationInfo.rightColumnSize}} resume-space-row"> </span> </div> </div> </div>
+<div role="tabpanel" class="tab-pane" id="education">
+    <div ng-repeat="educationData in educationsData">
+        <div class="row resume-item-row" ng-repeat="educationDataItem in educationData" >
+          <span class="{{paginationInfo.leftColumnOffset}} {{paginationInfo.leftColumnSize}}">
+                <b>{{educationDataItem.lable}}: </b>
+            </span>
+            <span class="{{paginationInfo.rightColumnSize}}">
+                {{educationDataItem.value}}
+            </span>
+        </div>
+        <div class="row">
+            <span class="{{paginationInfo.leftColumnOffset}} {{paginationInfo.leftColumnSize}}"> <br/> </span>
+            <span class="{{paginationInfo.rightColumnSize}} resume-space-row"> </span>
+        </div>
+    </div>
+</div>
