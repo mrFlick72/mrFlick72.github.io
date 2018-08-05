@@ -7,10 +7,10 @@ export default ({title, avatar, text, htmlText}) => {
             {title && <div className="card-header">{title}</div>}
 
             <div className="card-body">
-                <p className="card-text">
+                <div className="card-text">
                     {avatar && <img className="left-decorator" src={avatar}/>}
                     {htmlText ? <div dangerouslySetInnerHTML={{__html:htmlText}} /> : {text}}
-                </p>
+                </div>
             </div>
         </div>)
 }
