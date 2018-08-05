@@ -30,15 +30,12 @@ export default class HomePage extends React.Component {
     }
 
     getTweets() {
-        let observable = from(fetch("https://valeriovaudiio-backend.cfapps.io/twitter/userTimeLine")
+        return from(fetch("https://valeriovaudiio-backend.cfapps.io/twitter/userTimeLine")
             .then(response => response.json()))
             .pipe(flatMap(userTimeline => userTimeline))
             .pipe(flatMap(userTimelineItem => {
                 return this.getTweet(userTimelineItem.idStr)
             }));
-
-        return zipStatic(observable)
-            .pipe(flatMap(tweet => tweet));
 
     }
 
