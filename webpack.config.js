@@ -1,4 +1,6 @@
 const path = require('path');
+var webpack = require("webpack")
+
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
     entry: {
@@ -7,7 +9,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(png|jpeg|jpg|gif)$/i,
+                test: /\.(png|jpeg|gif)$/,
                 use: [
                     {
                         loader: 'url-loader',
@@ -33,6 +35,17 @@ module.exports = {
         path: path.resolve(__dirname)
     },
     plugins: [
+
+        new webpack.LoaderOptionsPlugin({
+            options: {
+                uglify: false
+            }
+        }),
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify('development')
+            }
+        }),
         new CleanWebpackPlugin(['dist'])
     ]
 };
