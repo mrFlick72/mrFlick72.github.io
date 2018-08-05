@@ -1,17 +1,19 @@
 import React from 'react';
 
 import avatar from '../../app/asset/images/myPhoto.jpeg';
+import mrFlick from '../../app/asset/images/twitterReaderAvatar.jpg';
 import WebContentReader from "../component/reader/WebContentReader";
-import {from, zip as zipStatic} from 'rxjs';
-import {map, flatMap} from 'rxjs/operators';
+import {from} from 'rxjs';
+import {flatMap} from 'rxjs/operators';
 import TwitterContentReader from "../component/reader/TwitterContentReader";
 import WebContentRepository from "../domain/repository/WebContentRepository";
 
+const TWITTER_READER_TITLE = "Valerio Vaudi"
 
 export default class HomePage extends React.Component {
 
     constructor(props) {
-        super(props)
+        super(props);
 
         this.webContentRepository = new WebContentRepository("html");
         this.state = {
@@ -24,11 +26,6 @@ export default class HomePage extends React.Component {
 
     getTweet(contentId) {
         return fetch(["https://valeriovaudiio-backend.cfapps.io/twitter/tweet", contentId].join("/")).then(response => response.json())
-    }
-
-    addOnList(array, item) {
-        array.push(item);
-        return array;
     }
 
     getTweets() {
@@ -66,17 +63,17 @@ export default class HomePage extends React.Component {
             </div>
 
             <div className="row bd-highlight mb-3">
-                <div className="col-6">
+                <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <WebContentReader title="Music" htmlText={this.state.musicContent}/>
                 </div>
-                <div className="col-6">
+                <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <WebContentReader title="Work" htmlText={this.state.workContent}/>
                 </div>
             </div>
 
             <div className="row bd-highlight mb-3">
                 <div className="col-12">
-                    <TwitterContentReader tweets={this.state.tweets} userDetails="Valerio Vaudi"/>
+                    <TwitterContentReader avatar={mrFlick} tweets={this.state.tweets} title={TWITTER_READER_TITLE}/>
                 </div>
             </div>
         </div>
