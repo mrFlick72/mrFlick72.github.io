@@ -5,6 +5,7 @@ import WebContentReader from "../component/reader/WebContentReader";
 import {from, zip as zipStatic} from 'rxjs';
 import {map, flatMap} from 'rxjs/operators';
 import TwitterContentReader from "../component/reader/TwitterContentReader";
+import WebContentRepository from "../domain/repository/WebContentRepository";
 
 
 export default class HomePage extends React.Component {
@@ -12,13 +13,14 @@ export default class HomePage extends React.Component {
     constructor(props) {
         super(props)
 
+        this.webContentRepository = new WebContentRepository("html");
         this.state = {
             tweets: [],
             bioContent: "<p></p>",
             workContent: "<p></p>",
             musicContent: "<p></p>"
         }
-        }
+    }
 
     getTweet(contentId) {
         return fetch(["https://valeriovaudiio-backend.cfapps.io/twitter/tweet", contentId].join("/")).then(response => response.json())
@@ -40,24 +42,19 @@ export default class HomePage extends React.Component {
     }
 
     componentDidMount() {
-        fetch("/valerio-vaudi/src/app/content/home/bio.html")
-            .then(result => result.text())
+        this.webContentRepository.getContent("home", "bio")
             .then(text => this.setState({bioContent: text}));
 
-        fetch("/valerio-vaudi/src/app/content/home/music.html")
-            .then(result => result.text())
+        this.webContentRepository.getContent("home", "music",)
             .then(text => this.setState({musicContent: text}));
 
-        fetch("/valerio-vaudi/src/app/content/home/work.html")
-            .then(result => result.text())
+        this.webContentRepository.getContent("home", "work")
             .then(text => this.setState({workContent: text}));
 
         this.getTweets()
-            .subscribe((tweetHtml) => {
-                this.setState({tweets: this.addOnList(this.state.tweets, tweetHtml.html)});
-
+            .subscribe((tweet) => {
+                this.setState((prevState) => ({tweets: prevState.tweets.concat(tweet.html)}))
             });
-
     }
 
     render() {
