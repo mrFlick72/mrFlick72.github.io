@@ -2,7 +2,8 @@ blockquote.twitter-tweet {
     display: inline-block;
     padding: 16px;
     margin: 10px 0;
-    max-width: 468px;
+    width: 100%;
+    /*max-width: 468px;*/
     border: #ddd 1px solid;
     border-top-color: #eee;
     border-bottom-color: #bbb;
