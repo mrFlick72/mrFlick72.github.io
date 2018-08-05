@@ -57,22 +57,22 @@ export default class HomePage extends React.Component {
     render() {
         return <div>
             <div className="row bd-highlight mb-3">
-                <div className="col-12">
+                <div id="bio" className="col-12">
                     <WebContentReader avatar={avatar} title="Bio" htmlText={this.state.bioContent}/>
                 </div>
             </div>
 
             <div className="row bd-highlight mb-3">
-                <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                <div id="music" className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <WebContentReader title="Music" htmlText={this.state.musicContent}/>
                 </div>
-                <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                <div id="work" className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <WebContentReader title="Work" htmlText={this.state.workContent}/>
                 </div>
             </div>
 
             <div className="row bd-highlight mb-3">
-                <div className="col-12">
+                <div id="tweets" className="col-12">
                     <TwitterContentReader avatar={mrFlick} tweets={this.state.tweets} title={TWITTER_READER_TITLE}/>
                 </div>
             </div>
