@@ -7,10 +7,11 @@ import {from} from 'rxjs';
 import {flatMap} from 'rxjs/operators';
 import TwitterContentReader from "../component/reader/TwitterContentReader";
 import WebContentRepository from "../domain/repository/WebContentRepository";
+import {withRouter} from "react-router-dom";
 
 const TWITTER_READER_TITLE = "Valerio Vaudi"
 
-export default class HomePage extends React.Component {
+class HomePage extends React.Component {
 
     constructor(props) {
         super(props);
@@ -55,6 +56,12 @@ export default class HomePage extends React.Component {
     }
 
     render() {
+        const { match, location, history } = this.props
+
+        console.log(match)
+        console.log(location)
+        console.log(history)
+
         return <div>
             <div className="row bd-highlight mb-3">
                 <div id="bio" className="col-12">
@@ -80,3 +87,5 @@ export default class HomePage extends React.Component {
 
     }
 }
+
+export default withRouter(HomePage);
