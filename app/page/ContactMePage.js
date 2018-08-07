@@ -24,6 +24,7 @@ export default class ContactMePage extends React.Component {
 
         this.mailRepository = new MailRepository();
         this.sendMail = this.sendMail.bind(this);
+        this.resetMailFormData = this.resetMailFormData.bind(this);
     }
 
     sendMail(e) {
@@ -52,6 +53,14 @@ export default class ContactMePage extends React.Component {
 
                 $("#contactModalMessage").modal("show");
             })
+    }
+
+    resetMailFormData(){
+        if(this.state.alertClass === "alert alert-success"){
+            this.mailDataRef.mailSender.current.value = "";
+            this.mailDataRef.mailSubject.current.value = "";
+            this.mailDataRef.mailContent.current.value = "";
+        }
     }
 
     render() {
@@ -123,7 +132,7 @@ export default class ContactMePage extends React.Component {
                                 </div>
                             </div>
                             <div className="modal-footer">
-                                <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" onClick={this.resetMailFormData} className="btn btn-secondary" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
