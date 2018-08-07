@@ -13,6 +13,7 @@ import MenuItem from "./component/menu/MenuItem";
 import HomePage from "./page/HomePage";
 import {HashRouter, Route, Link, Switch} from "react-router-dom";
 import PageUnderConstruction from "./page/PageUnderConstruction";
+import ContactMePage from "./page/ContactMePage";
 
 export default () => {
     return <HashRouter basepath="/valerio-vaudi">
@@ -28,7 +29,7 @@ export default () => {
                 <Route exact path="/" component={HomePage}/>
                 <Route exact path="/music" component={PageUnderConstruction}/>
                 <Route exact path="/resume" component={PageUnderConstruction}/>
-                <Route exact path="/contact-me" component={PageUnderConstruction}/>
+                <Route exact path="/contact-me" component={ContactMePage}/>
             </Switch>
         </div>
     </HashRouter>
