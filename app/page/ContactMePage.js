@@ -1,8 +1,32 @@
 import React from 'react';
 import contactMeAvatar from "../asset/images/mail-min.jpg"
 import "../asset/css/components.css"
+import MailRepository from "../domain/repository/MailRepository";
 
 export default class ContactMePage extends React.Component {
+
+    constructor(props) {
+        super(props);
+
+        this.mailDataRef = {
+            mailSender: React.createRef(),
+            mailSubject: React.createRef(),
+            mailContent: React.createRef()
+        };
+
+        this.mailRepository = new MailRepository();
+        this.sendMail = this.sendMail.bind(this);
+    }
+
+    sendMail(e) {
+        e.preventDefault();
+        let mailData = {
+            "from": this.mailDataRef.mailSender.current.value,
+            "subject": this.mailDataRef.mailSubject.current.value,
+            "message": this.mailDataRef.mailContent.current.value
+        };
+        this.mailRepository.sendMail(mailData)
+    }
 
     render() {
         return (
@@ -18,7 +42,7 @@ export default class ContactMePage extends React.Component {
 
                 <div className="row">
                     <div className="col-12">
-                        <hr />
+                        <hr/>
                     </div>
                 </div>
 
@@ -27,24 +51,28 @@ export default class ContactMePage extends React.Component {
                         <div className="card">
                             <div className="card-body">
                                 <div className="card-text">
-                                    <form>
+                                    <form onSubmit={this.sendMail}>
                                         <div className="form-group">
-                                            <label htmlFor="exampleInputEmail1">Your mail address</label>
-                                            <input type="email" className="form-control"
+                                            <label>Your mail address</label>
+                                            <input ref={this.mailDataRef.mailSender}
+                                                   className="form-control"
                                                    placeholder="Enter your mail address"/>
                                         </div>
 
                                         <div className="form-group">
-                                            <label htmlFor="exampleInputEmail1">Mail subject</label>
-                                            <input type="email" className="form-control"
+                                            <label>Mail subject</label>
+                                            <input ref={this.mailDataRef.mailSubject}
+                                                   className="form-control"
                                                    placeholder="Mail subject"/>
                                         </div>
                                         <div className="form-group">
-                                            <label htmlFor="exampleInputPassword1">Mail content </label>
-                                            <textarea rows="10" className="form-control" placeholder="Mail content ...."/>
+                                            <label>Mail content </label>
+                                            <textarea ref={this.mailDataRef.mailContent}
+                                                      rows="10" className="form-control"
+                                                      placeholder="Mail content ...."/>
                                         </div>
 
-                                        <button type="button" className="btn btn-primary float-right">Send Mail</button>
+                                        <button type="submit" className="btn btn-primary float-right">Send Mail</button>
                                     </form>
                                 </div>
                             </div>
