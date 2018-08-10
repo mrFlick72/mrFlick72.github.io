@@ -14,6 +14,7 @@ import HomePage from "./page/HomePage";
 import {HashRouter, Route, Link, Switch} from "react-router-dom";
 import PageUnderConstruction from "./page/PageUnderConstruction";
 import ContactMePage from "./page/ContactMePage";
+import MusicPage from "./page/MusicPage";
 
 export default () => {
     return <HashRouter basepath="/valerio-vaudi">
@@ -27,7 +28,7 @@ export default () => {
 
             <Switch>
                 <Route exact path="/" component={HomePage}/>
-                <Route exact path="/music" component={PageUnderConstruction}/>
+                <Route exact path="/music" component={MusicPage}/>
                 <Route exact path="/resume" component={PageUnderConstruction}/>
                 <Route exact path="/contact-me" component={ContactMePage}/>
             </Switch>
