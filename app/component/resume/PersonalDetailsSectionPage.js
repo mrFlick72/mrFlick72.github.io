@@ -22,7 +22,8 @@ const PERSONAL_DETAILS_LABEL = {
 
 export default ({personalDetails}) => {
 
-    return <div>{
+    return <div>
+        <ResumeRow label="" avatar={avatar}/>{
         Object.keys(personalDetails).map(function (key, index) {
             return <ResumeRow label={PERSONAL_DETAILS_LABEL[key]}
                               content={personalDetails[key]}/>

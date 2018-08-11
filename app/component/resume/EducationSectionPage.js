@@ -11,10 +11,10 @@ const EUCATION_LABEL = {
     "date": "Date"
 };
 
-export default ({education}) => {
+export default ({educationDetails}) => {
 
     return <div>{
-        education.map(educationItem => {
+        educationDetails.map(educationItem => {
             return <div>{Object.keys(educationItem).map(function (key, index) {
                 return <ResumeRow label={EUCATION_LABEL[key]} content={educationItem[key]}/>
             })}
