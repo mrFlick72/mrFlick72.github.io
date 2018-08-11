@@ -76,4 +76,26 @@ export default class {
             }
         ]
     }
+
+    getSkillDetails() {
+        return [
+            {
+                "familyName": "Computer Science",
+                "value": ["Microservices", "Domain Driven Design", "Hexagonal Architecture", "T.D.D.", "REST"]
+            },
+            {"familyName": "Languages", "value": ["Java", "Kotlin", "JavaScript", "SQL"]},
+            {"familyName": "", "value": ["J2EE", "Apache Maven", "ReactJS"]},
+
+            {
+                "familyName": "Spring", "value": ["Spring Core",
+                    "Spring Web",
+                    "Spring WebFlux",
+                    "Spring Security",
+                    "Spring Integration",
+                    "Spring Data(JPA, MongoDB, Cassandra)",
+                    "Spring Boot",
+                    "Spring Cloud"]
+            }
+        ]
+    }
 }
