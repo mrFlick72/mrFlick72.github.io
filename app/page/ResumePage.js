@@ -5,6 +5,7 @@ import RowSeparator from "../component/layout/RowSeparator";
 import EducationSectionPage from "../component/resume/EducationSectionPage";
 import ResumeRepository from "../domain/repository/ResumeRepository";
 import SkillSectionPage from "../component/resume/SkillSectionPage";
+import WorkExperienceSectionPage from "../component/resume/WorkExperienceSectionPage";
 
 export default class extends React.Component {
 
@@ -30,6 +31,12 @@ export default class extends React.Component {
 
             <ResumeSectionContainer title="Technical Skills">
                 <SkillSectionPage skillDetails={this.resumeRepository.getSkillDetails()}/>
+            </ResumeSectionContainer>
+
+            <RowSeparator/>
+
+            <ResumeSectionContainer title="Work Experience">
+                <WorkExperienceSectionPage workExperience={this.resumeRepository.getWorkExperience()}/>
             </ResumeSectionContainer>
 
             <RowSeparator/>

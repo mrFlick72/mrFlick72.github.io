@@ -9,8 +9,8 @@ export default class {
             "city": "Como",
             "region": "Como",
             "mail": "valerio.vaudi@gmail.com",
-            "telephone": "069873633",
             "mobile": "3392381976",
+            "skype": "valerio8800",
             "birthDate": "14/12/1985",
             "state": "Italy",
             "sex": "Male",
@@ -97,5 +97,56 @@ export default class {
                     "Spring Cloud"]
             }
         ]
+    }
+
+
+    getWorkExperience() {
+        return [
+            {
+                "company": "Lastminute.com Group",
+                "startActivityDate": "04/12/2017",
+                "endActivityDate": "today",
+                "commitments": ["Member of Dracarys Team (Scrum team)"],
+                "jobDescription": "In Dracarys team, I am involved into\n" +
+                "maintenance, evolving and develop of all\n" +
+                "post sale customer area and order\n" +
+                "management products of Lastminte.com\n" +
+                "group. The team is a Scrum team in a fully\n" +
+                "agile environment. The team therefore is\n" +
+                "involved in all the scrum ceremonies like:\n" +
+                "planning, product refinement, sprint\n" +
+                "review and so on."
+            },
+            {
+                "company": "Sourceense",
+                "startActivityDate": "16/09/2015",
+                "endActivityDate": "16/11/2017",
+                "commitments": ["JAVA EE & Spring Ecosystem Specialist",
+                    "Software Developer", "Microservices architecture style pre-sales",
+                    "Technical leadership on Liferay product"],
+                "jobDescription": "The my principal commitments was on\n" +
+                "Liferay Portal and Microservice Architecture style Pre-Sale. I was one of\n" +
+                "the key people during the Tripy-Evo and\n" +
+                "Trade portal development for AXA."
+            },
+            {
+                "company": "Geo-Consulting",
+                "startActivityDate": "11/06/2012",
+                "endActivityDate": "13/11/2015",
+                "commitments": ["J2EE & Spring Specialist", "Software Analyst & Architect", "Fast Software Prototype"],
+                "jobDescription": "In Geo-Consulting I was involved in many\n" +
+                "activities like poc development, software\n" +
+                "analyst, design software architecture and\n" +
+                "so on. The more valuable product\n" +
+                "developed was a transaction manager for\n" +
+                "SAP. It was developed on top of the official\n" +
+                "SapJCo, this module was the foundation\n" +
+                "for almost all integration projects\n" +
+                "between SAP and the external “World”\n" +
+                "like Afresco, Magento and custom\n" +
+                "systems. I was also the technical\n" +
+                "leader/coach for all the new junior\n" +
+                "engineer hired in the company."
+            }]
     }
 }

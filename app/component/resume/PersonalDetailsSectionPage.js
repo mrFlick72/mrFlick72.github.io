@@ -12,7 +12,7 @@ const PERSONAL_DETAILS_LABEL = {
     "city": "City",
     "region": "Region",
     "mail": "E-Mail",
-    "telephone": "Thelephone",
+    "skype": "Skype",
     "mobile": "Mobile",
     "birthDate": "Birth Date",
     "state": "State",
