@@ -56,7 +56,7 @@ class HomePage extends React.Component {
     }
 
     render() {
-        const { match, location, history } = this.props
+        const {match, location, history} = this.props
 
         console.log(match)
         console.log(location)
