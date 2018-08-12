@@ -29,7 +29,7 @@ export default () => {
             <Switch>
                 <Route exact path="/" component={HomePage}/>
                 <Route exact path="/music" component={MusicPage}/>
-                <Route exact path="/resume" component={ResumePage}/>
+                <Route path="/resume" component={ResumePage}/>
                 <Route exact path="/contact-me" component={ContactMePage}/>
             </Switch>
         </div>

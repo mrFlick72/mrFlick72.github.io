@@ -5,7 +5,6 @@ import RowSeparator from "../layout/RowSeparator";
 
 
 export default ({workExperience}) => {
-    console.log(workExperience)
     return <div>{
         workExperience.map(experience => {
             return <div>

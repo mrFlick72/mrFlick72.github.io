@@ -4,7 +4,6 @@ import avatar from '../../app/asset/images/myPhoto.jpeg';
 import WebContentReader from "../component/reader/WebContentReader";
 import WebContentRepository from "../domain/repository/WebContentRepository";
 
-
 export default class extends React.Component {
 
     constructor(props) {
