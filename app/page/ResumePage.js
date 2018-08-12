@@ -1,13 +1,12 @@
 import React from 'react';
 import ResumeSectionContainer from "../component/resume/ResumeSectionContainer";
 import PersonalDetailsSectionPage from "../component/resume/PersonalDetailsSectionPage";
-import RowSeparator from "../component/layout/RowSeparator";
 import EducationSectionPage from "../component/resume/EducationSectionPage";
 import ResumeRepository from "../domain/repository/ResumeRepository";
 import SkillSectionPage from "../component/resume/SkillSectionPage";
 import WorkExperienceSectionPage from "../component/resume/WorkExperienceSectionPage";
 import LanguageSkillSectionPage from "../component/resume/LanguageSkillSectionPage";
-import {Route, Link, Switch} from "react-router-dom";
+import {Route, Link, Switch, Redirect} from "react-router-dom";
 
 export default class extends React.Component {
 
@@ -79,6 +78,8 @@ export default class extends React.Component {
                                            languageDetails={this.resumeRepository.getLanguages()}/>
                                    </ResumeSectionContainer>
                                }}/>
+
+                        <Redirect from='/resume' to='/resume/personal-details'/>
                     </Switch>
                 </div>
             </div>
