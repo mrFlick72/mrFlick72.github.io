@@ -23,7 +23,7 @@ export default class extends React.Component {
                     <Link className="nav-link" to={"/resume/personal-details"}>Personal Details</Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link" to={"/resume/education-details"}>Personal Education</Link>
+                    <Link className="nav-link" to={"/resume/education-details"}>Education</Link>
                 </li>
                 <li className="nav-item">
                     <Link className="nav-link" to={"/resume/skills-details"}>Skills</Link>
