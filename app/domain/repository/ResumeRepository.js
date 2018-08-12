@@ -100,7 +100,7 @@ export default class {
     }
 
 
-    getWorkExperience() {
+    getWorkExperienceDetails() {
         return [
             {
                 "company": "Lastminute.com Group",
@@ -148,5 +148,28 @@ export default class {
                 "leader/coach for all the new junior\n" +
                 "engineer hired in the company."
             }]
+    }
+
+    getLanguages() {
+        return {
+            "mainLanguage": "Italian",
+            "otherLanguages": [
+                {
+                    "languageName": "English",
+                    "understanding": {
+                        "listening": "B2",
+                        "reading": "B2"
+                    },
+                    "speaking": {
+                        "spokenInteraction": "B2",
+                        "spokenProduction": "B2"
+                    },
+                    "writing":
+                        {
+                            "writing": "B2"
+                        }
+                }
+            ]
+        }
     }
 }
