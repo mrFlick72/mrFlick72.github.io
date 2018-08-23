@@ -14,7 +14,11 @@ export default class extends React.Component {
         this.musicContentSrcList = [
             "https://www.youtube.com/embed/H_m0SkMg9nU",
             "https://www.youtube.com/embed/zgKY_FdDatk",
-            "https://www.youtube.com/embed/EKGZUsIU1rc"];
+            "https://www.youtube.com/embed/EKGZUsIU1rc",
+            "https://www.youtube.com/embed/tJR2soTt44o",
+            "https://www.youtube.com/embed/YhKoqB3DqFs",
+            "https://www.youtube.com/embed/ITV4Hwi-XZo"
+        ];
 
         this.webContentRepository = new WebContentRepository("html");
     }
