@@ -1,4 +1,4 @@
-const BASE_URL = "/valerio-vaudi/app/content";
+const BASE_URL = "/app/content";
 
 export default class WebContentRepository {
 
