@@ -6,6 +6,7 @@ module.exports = {
     entry: {
         app: './app/index.js'
     },
+    mode: 'production',
     module: {
         rules: [
             {
@@ -35,17 +36,6 @@ module.exports = {
         path: path.resolve(__dirname)
     },
     plugins: [
-
-        new webpack.LoaderOptionsPlugin({
-            options: {
-                uglify: false
-            }
-        }),
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: JSON.stringify('development')
-            }
-        }),
         new CleanWebpackPlugin(['dist'])
     ]
 };
