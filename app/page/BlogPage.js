@@ -3,6 +3,8 @@ import React from 'react';
 import "../asset/css/components.css"
 import "bootstrap/dist/js/bootstrap";
 import MarckDownDocumentReader from "../component/reader/MarckDownDocumentReader";
+import WebContentRepository from "../domain/repository/WebContentRepository";
+import RowSeparator from "../component/layout/RowSeparator";
 
 export default class BlogPage extends React.Component {
 
@@ -10,22 +12,35 @@ export default class BlogPage extends React.Component {
         super(props);
 
         this.state = {
-            blogDoc: "<div></div>"
+            blogDocs: [
+                "spring-cloud-kubernetes-demo",
+                "reservation-service",
+                "bootiful-kotlin-todo-list",
+                "sleuth-spike"],
         }
+
+        this.webContentRepository = new WebContentRepository()
     }
 
-    componentDidMount() {
-        fetch("https://raw.githubusercontent.com/mrFlick72/spring-cloud-kubernetes-demo/master/README.md")
-            .then(response => response.text())
-            .then(text => {
-                console.log(text)
-                this.setState({blogDoc: text})
-            })
+    getBlogContent(repoName) {
+        this.webContentRepository.getBlogContent(repoName)
+            .then(markdownText => this.setState({blogContent: markdownText}))
     }
+
 
     render() {
-        return <MarckDownDocumentReader title="Test" documentText={this.state.blogDoc}>
+        return <React.Fragment>
 
-        </MarckDownDocumentReader>
+            <ul className="list-group">
+                {this.state.blogDocs.map(blogDocName =>
+                    <li className="list-group-item"
+                        onClick={this.getBlogContent.bind(this, blogDocName)}>{blogDocName}</li>)}
+            </ul>
+
+            <RowSeparator/>
+
+            {this.state.blogContent &&
+            <MarckDownDocumentReader title="Test" documentText={this.state.blogContent}/>}
+        </React.Fragment>
     }
 }
