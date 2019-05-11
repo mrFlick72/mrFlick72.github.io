@@ -10,7 +10,7 @@ export default ({workExperience}) => {
             return <div>
                 <ResumeRow label="Company" content={experience["company"]}/>
                 <ResumeRow label="Activity period"
-                           content={`${experience["startActivityDate"]} - ${experience["startActivityDate"]}`}/>
+                           content={`${experience["startActivityDate"]} - ${experience["endActivityDate"]}`}/>
                 <ResumeRow label="Commitments"
                            content={experience['commitments'].map(commitment => <p><b>{commitment}</b></p>)}/>
                 <ResumeRow label="Job description"
