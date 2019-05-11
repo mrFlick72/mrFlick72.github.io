@@ -1,5 +1,6 @@
 const path = require('path');
 var webpack = require("webpack")
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
@@ -32,10 +33,16 @@ module.exports = {
         ]
     },
     output: {
-        filename: 'dist/app_bundle.js',
+        filename: 'dist/app_bundle_[hash].js',
         path: path.resolve(__dirname)
     },
+
     plugins: [
+        new HtmlWebpackPlugin({
+            chunks: ['app'],
+            filename: "index.html",
+            template: path.resolve(__dirname, "index.html")
+        }),
         new CleanWebpackPlugin(['dist'])
     ]
 };
