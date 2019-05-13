@@ -6,7 +6,7 @@ import MarckDownDocumentReader from "../component/reader/MarckDownDocumentReader
 import WebContentRepository from "../domain/repository/WebContentRepository";
 import RowSeparator from "../component/layout/RowSeparator";
 
-export default class BlogPage extends React.Component {
+export default class TechPage extends React.Component {
 
     constructor(props) {
         super(props);
@@ -29,7 +29,7 @@ export default class BlogPage extends React.Component {
                     name: "sleuth-spike",
                     description: "A Sleuth usage example"
                 }],
-        }
+        };
 
         this.webContentRepository = new WebContentRepository()
     }
@@ -42,12 +42,20 @@ export default class BlogPage extends React.Component {
 
     render() {
         return <React.Fragment>
-
-            <ul className="list-group">
+            <div className="row">
                 {this.state.blogDocs.map(blogDocName =>
-                    <li className="list-group-item"
-                        onClick={this.getBlogContent.bind(this, blogDocName.name, blogDocName.description)}>{blogDocName.description}</li>)}
-            </ul>
+                    <div className="col">
+                        <div className="card" onClick={this.getBlogContent.bind(this, blogDocName.name, blogDocName.description)}>
+                            <div className="card-body">
+                                <h5 className="card-title">{blogDocName.name}</h5>
+                                <p className="card-text">{blogDocName.description}</p>
+                                <button type="button" className="btn btn-primary"
+                                        onClick={this.getBlogContent.bind(this, blogDocName.name, blogDocName.description)}>{blogDocName.description}
+                                </button>
+                            </div>
+                        </div>
+                    </div>)}
+            </div>
 
             <RowSeparator/>
 
