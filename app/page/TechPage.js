@@ -14,6 +14,9 @@ export default class TechPage extends React.Component {
         this.state = {
             blogDocs: [
                 {
+                    name: "vauthenticator",
+                    description: "The my OpenID Connect/OAuth2 Auth server"
+                }, {
                     name: "spring-cloud-kubernetes-demo",
                     description: "Spring Cloud Kubernetes usage example"
                 },
@@ -45,7 +48,8 @@ export default class TechPage extends React.Component {
             <div className="row">
                 {this.state.blogDocs.map(blogDocName =>
                     <div className="col">
-                        <div className="card" onClick={this.getBlogContent.bind(this, blogDocName.name, blogDocName.description)}>
+                        <div className="card"
+                             onClick={this.getBlogContent.bind(this, blogDocName.name, blogDocName.description)}>
                             <div className="card-body">
                                 <h5 className="card-title">{blogDocName.name}</h5>
                                 <p className="card-text">{blogDocName.description}</p>
