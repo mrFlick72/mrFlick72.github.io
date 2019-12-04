@@ -26,11 +26,11 @@ class HomePage extends React.Component {
     }
 
     getTweet(contentId) {
-        return fetch(["https://valeriovaudiio-backend.cfapps.io/twitter/tweet", contentId].join("/")).then(response => response.json())
+        return fetch("https://sp0gr45fw3.execute-api.eu-central-1.amazonaws.com/default/tweet-content?idStr=" + contentId,{mode: 'cors'}).then(response => response.json())
     }
 
     getTweets() {
-        return from(fetch("https://valeriovaudiio-backend.cfapps.io/twitter/userTimeLine")
+        return from(fetch("https://sp0gr45fw3.execute-api.eu-central-1.amazonaws.com/default/tweets",{mode: 'cors'})
             .then(response => response.json()))
             .pipe(flatMap(userTimeline => userTimeline))
             .pipe(flatMap(userTimelineItem => {
