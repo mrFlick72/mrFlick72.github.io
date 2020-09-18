@@ -106,14 +106,14 @@ export default class {
                 "company": "Lastminute.com Group",
                 "startActivityDate": "04/12/2017",
                 "endActivityDate": "today",
-                "commitments": ["Member of Dracarys Team (Scrum team)"],
-                "jobDescription": "In Dracarys team, I am involved into\n" +
+                "commitments": ["Customer Area/Order Management System", "Hotel Search Funnel"],
+                "jobDescription": "I am involved into\n" +
                 "maintenance, evolving and develop of all\n" +
                 "post sale customer area and order\n" +
-                "management products of Lastminte.com\n" +
-                "group. The team is a Scrum team in a fully\n" +
+                "management products of Lastminute.com\n" +
+                "group. Mainly I work with Scrum and/or Kamban Agile frameworks in a fully\n" +
                 "agile environment. The team therefore is\n" +
-                "involved in all the scrum ceremonies like:\n" +
+                "involved in all the typical ceremonies like:\n" +
                 "planning, product refinement, sprint\n" +
                 "review and so on."
             },

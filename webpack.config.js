@@ -1,8 +1,7 @@
 const path = require('path');
 var webpack = require("webpack")
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 module.exports = {
     entry: {
         app: './app/index.js'
@@ -44,6 +43,6 @@ module.exports = {
             filename: "index.html",
             template: path.resolve(__dirname, "index.html")
         }),
-        new CleanWebpackPlugin(['dist'])
+        new CleanWebpackPlugin({cleanOnceBeforeBuildPatterns: ['dist']})
     ]
 };
