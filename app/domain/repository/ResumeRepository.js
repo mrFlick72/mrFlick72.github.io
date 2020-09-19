@@ -80,7 +80,7 @@ export default class {
     getSkillDetails() {
         return [
             {
-                "familyName": "Deign an Architectures",
+                "familyName": "Design and Architectures",
                 "value": ["Microservices", "SOA", "Domain-Driven Design", "Hexagonal Architecture", "T.D.D.", "REST","Web Service (SOAP)"]
             },
             {"familyName": "Agile", "value": ["Scrum", "Kanban"]},
