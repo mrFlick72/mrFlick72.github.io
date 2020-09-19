@@ -12,7 +12,7 @@ export default ({languageDetails}) => {
                 <th>Writing</th>
             </tr>
             <tr>
-                <th></th>
+                <th/>
                 <th>Listening</th>
                 <th>Reading</th>
                 <th>Spoken Interaction</th>

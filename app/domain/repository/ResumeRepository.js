@@ -81,11 +81,12 @@ export default class {
         return [
             {
                 "familyName": "Computer Science",
-                "value": ["Microservices", "Domain Driven Design", "Hexagonal Architecture", "T.D.D.", "REST"]
+                "value": ["Microservices", "Domain-Driven Design", "Hexagonal Architecture", "T.D.D.", "REST","Web Service (SOAP)"]
             },
             {"familyName": "Languages", "value": ["Java", "Kotlin", "JavaScript", "SQL"]},
-            {"familyName": "", "value": ["J2EE", "Apache Maven", "ReactJS"]},
-
+            {"familyName": "Agile", "value": ["Scrum", "Kanban"]},
+            {"familyName": "DevOps", "value": ["Ansible", "Docker", "Kubernetes"]},
+            {"familyName": "Main Frameworks/Libraries", "value": ["J2EE", "Apache Maven", "ReactJS", "Reactor"]},
             {
                 "familyName": "Spring", "value": ["Spring Core",
                     "Spring Web",
@@ -95,7 +96,9 @@ export default class {
                     "Spring Data(JPA, MongoDB, Cassandra)",
                     "Spring Boot",
                     "Spring Cloud"]
-            }
+            },
+            {"familyName": "Security", "value": ["OAuth2", "OpenId Connect"]},
+            {"familyName": "Cloud", "value": ["Amazon Web Service (AWS)"]}
         ]
     }
 
@@ -119,7 +122,7 @@ export default class {
             },
             {
                 "company": "Sourceense",
-                "startActivityDate": "16/09/2015",
+                "startActivityDate": "16/11/2015",
                 "endActivityDate": "16/11/2017",
                 "commitments": ["JAVA EE & Spring Ecosystem Specialist",
                     "Software Developer", "Microservices architecture style pre-sales",

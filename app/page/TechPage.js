@@ -31,7 +31,12 @@ export default class TechPage extends React.Component {
                 {
                     name: "sleuth-spike",
                     description: "A Sleuth usage example"
-                }],
+                },
+                {
+                    name: "ansible-playground",
+                    description: "A my set of ansible playbooks"
+                }
+            ]
         };
 
         this.webContentRepository = new WebContentRepository()

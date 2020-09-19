@@ -21,8 +21,6 @@ const PERSONAL_DETAILS_LABEL = {
 }
 
 export default ({personalDetails}) => {
-
-    console.log("Personal details")
     return <div>
         <ResumeRow label="" avatar={avatar}/>{
         Object.keys(personalDetails).map(function (key, index) {
