@@ -80,15 +80,18 @@ export default class {
     getSkillDetails() {
         return [
             {
-                "familyName": "Computer Science",
-                "value": ["Microservices", "Domain-Driven Design", "Hexagonal Architecture", "T.D.D.", "REST","Web Service (SOAP)"]
+                "familyName": "Deign an Architectures",
+                "value": ["Microservices", "SOA", "Domain-Driven Design", "Hexagonal Architecture", "T.D.D.", "REST","Web Service (SOAP)"]
             },
-            {"familyName": "Languages", "value": ["Java", "Kotlin", "JavaScript", "SQL"]},
             {"familyName": "Agile", "value": ["Scrum", "Kanban"]},
-            {"familyName": "DevOps", "value": ["Ansible", "Docker", "Kubernetes"]},
-            {"familyName": "Main Frameworks/Libraries", "value": ["J2EE", "Apache Maven", "ReactJS", "Reactor"]},
+            {"familyName": "System Engineering", "value": ["Ansible", "Docker", "Kubernetes"]},
+            {"familyName": "Cloud", "value": ["Amazon Web Service (AWS)"]},
+            {"familyName": "Security", "value": ["OAuth2", "OpenId Connect"]},
+            {"familyName": "Languages", "value": ["Java", "Kotlin", "JavaScript", "SQL"]},
+            {"familyName": "JS Ecosystem", "value": [" ReactJS", "ES6"]},
+            {"familyName": "Java Ecosystem", "value": ["JavaEE", "Apache Maven", "Reactor"]},
             {
-                "familyName": "Spring", "value": ["Spring Core",
+                "familyName": "Spring Ecosystem", "value": ["Spring Core",
                     "Spring Web",
                     "Spring WebFlux",
                     "Spring Security",
@@ -96,9 +99,7 @@ export default class {
                     "Spring Data(JPA, MongoDB, Cassandra)",
                     "Spring Boot",
                     "Spring Cloud"]
-            },
-            {"familyName": "Security", "value": ["OAuth2", "OpenId Connect"]},
-            {"familyName": "Cloud", "value": ["Amazon Web Service (AWS)"]}
+            }
         ]
     }
 
